@@ -174,7 +174,7 @@ metadata rules
 - Intercepting routes allow ypou to intercept or stop the default routing behaviour to present an alternate view or component when navigation through the UI, while still preserving the intentded route for scenarios like page reloads.
 - This can be useful if you want to show a route while keeping the context of the current page.
 
-### Intercepting Routes convention
+### 18. Intercepting Routes convention
 
 - `(.)` to match segments on the same level.
 - `(..)` to match segments on level above
@@ -185,3 +185,12 @@ Note:- (..)(..) Having some issue to routing It will be fixed soon.
 ```
 
 - `(...)` to match segments form the root app directory.
+
+
+### 19. Route Handlers
+- We can also create request handlers for our routes using a feature called route handlers.
+- Unlike page routes, which respond with HTML content, route handlers allow you to create RESTful endpoints, giving you full control over the response.
+- There is no overhead of having to create and confiure a separate server.
+- Route handlers are also greate for making external API requests.
+- Route handlers run server-side, enduring that sensetive information like private keys remains secure and never gets shipped to the browser.
+- Route Handlers are the equivalent of API routes in Page router.

@@ -1,9 +1,3 @@
-import React from 'react'
-
-const Modal = () => {
-  return (
-    <div>Modal</div>
-  )
+export default function Default() {
+  return null;
 }
-
-export default Modal
