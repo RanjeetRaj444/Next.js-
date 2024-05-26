@@ -1,4 +1,5 @@
 import { comments } from "../data";
+import { redirect } from "next/navigation";
 //dynamic routes for finding particular product.
 export async function GET(
 	_request: Request,
@@ -10,6 +11,9 @@ export async function GET(
 		};
 	},
 ) {
+	if (parseInt(params.id) > comments.length) {
+		redirect("/comments");
+	}
 	const comment = comments.find(
 		(comment) => comment.id === parseInt(params.id),
 	);

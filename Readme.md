@@ -186,11 +186,48 @@ Note:- (..)(..) Having some issue to routing It will be fixed soon.
 
 - `(...)` to match segments form the root app directory.
 
-
 ### 19. Route Handlers
+
 - We can also create request handlers for our routes using a feature called route handlers.
 - Unlike page routes, which respond with HTML content, route handlers allow you to create RESTful endpoints, giving you full control over the response.
 - There is no overhead of having to create and confiure a separate server.
 - Route handlers are also greate for making external API requests.
 - Route handlers run server-side, enduring that sensetive information like private keys remains secure and never gets shipped to the browser.
 - Route Handlers are the equivalent of API routes in Page router.
+
+  - Headers in Route Handlers
+
+    - HTTp headers represent the metadata associated with an API request and response.
+
+    1.  Request Headers
+
+    - These are sent by the client, sech as a web browser, to the server. They contain essential information about the request, which help the server understand and process it correctly.
+      For Example:-
+
+    ```
+    `User-Agent` which identifies the browser and operating system to the server.
+    `Accept` which specifies the type of content ( text, video, image format ) that the client can accept.
+    `Authorization` header used by the client to authenticate itself to the server.
+
+    ```
+
+    2. Response Headers
+
+    - These are sent back from the server to the client. They provide information about the server and the data being sent in the response.
+
+    For Example :-
+
+    ```
+    `Content-Type` header wiich indicates the media type of the response. It tells the client what data type of the returned cointent is, such as text/html for HTML documents, application/json for JSON data, etc..
+
+    ```
+  
+  - Cookies in Route Handlers.
+    - Cookies are small pieces of data that a server sends to a user's web browser.
+    - The browser may store the cookies and send it back to the same server with later requests.
+    - Cookies are mainly used for three purpose.
+      - Session management like login and shopping carts
+      - Personalization like user preferences and themes
+      - Tracking like recording and analyzing user bhaviour.
+
+
