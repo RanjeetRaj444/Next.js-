@@ -221,8 +221,9 @@ Note:- (..)(..) Having some issue to routing It will be fixed soon.
     `Content-Type` header wiich indicates the media type of the response. It tells the client what data type of the returned cointent is, such as text/html for HTML documents, application/json for JSON data, etc..
 
     ```
-  
-  - Cookies in Route Handlers.
+
+    3. Cookies in Route Handlers.
+
     - Cookies are small pieces of data that a server sends to a user's web browser.
     - The browser may store the cookies and send it back to the same server with later requests.
     - Cookies are mainly used for three purpose.
@@ -230,4 +231,20 @@ Note:- (..)(..) Having some issue to routing It will be fixed soon.
       - Personalization like user preferences and themes
       - Tracking like recording and analyzing user bhaviour.
 
+    4. Catching in Route handler
 
+    - Route Handlers are cached by default when using GET method with the Response object in Next.js
+    - How to opt out of caching?
+      - dynamic mode in Segment Config Option.
+      - using the Request object with the GET method.
+      - employing dynamic function like headers() and cookies().
+      - using any HTTP methods other than GET.
+
+    5. Middleware
+
+    - Middleware in Next.js is a powerful features that offeres a robust way to intercept and control the flow of requests and responses within your applications.
+    - It does this at a global level significantly enhancing features like redirection, URL rewrites, authentication, headers and cookies management, and more.
+
+    - Middleware allows us to specify path where it will be active.
+      - Coustom matcher config
+      - conditional statements.
